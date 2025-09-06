@@ -20,15 +20,6 @@ class AbrigoAnimais {
       Loco: { especie: "jabuti", brinquedos: ["SKATE", "RATO"] },
     };
 
-    const todosBrinquedosValidos = [];
-    for (let nomeAnimal in animais) {
-      for (let brinquedo of animais[nomeAnimal].brinquedos) {
-        if (!todosBrinquedosValidos.includes(brinquedo)) {
-          todosBrinquedosValidos.push(brinquedo);
-        }
-      }
-    }
-
     const pessoa1 = brinquedosPessoa1.split(",")
     const pessoa2 = brinquedosPessoa2.split(",")
     const ordem = ordemAnimais.split(",")
