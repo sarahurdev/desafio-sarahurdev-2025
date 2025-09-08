@@ -1,4 +1,4 @@
-class OndemBrinquedo {
+class OrdemBrinquedo {
 
     ordem(listaPessoa, brinqFav, especie) {
         if (especie === "jabuti") {
@@ -10,8 +10,12 @@ class OndemBrinquedo {
             if (lista === brinqFav[i]) {
                 i++;
             }
-            if (i === brinqFav.length) return true;
+            if (i === brinqFav.length) {
+                return true;
+            }
         }
         return false;
     }
 }
+
+export { OrdemBrinquedo }
