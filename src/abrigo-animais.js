@@ -39,6 +39,7 @@ class AbrigoAnimais {
         const res = resultado[0]
         return { erro: res }
       }
+
       const { especie, brinquedos } = animais[nome];
 
       const pessoa1IsOk = p1.ordem(pessoa1, brinquedos, especie);
@@ -51,11 +52,13 @@ class AbrigoAnimais {
           destino = "pessoa 1";
           adotadosPorPessoa[1].push(nome);
 
-        } else if (pessoa2IsOk && adotadosPorPessoa[2].length > 0 && adotadosPorPessoa[2].length < 3) {
+        }
+        else if (pessoa2IsOk && adotadosPorPessoa[2].length > 0 && adotadosPorPessoa[2].length < 3) {
           destino = "pessoa 2";
           adotadosPorPessoa[2].push(nome);
         }
-      } else {
+      }
+      else {
         if (pessoa1IsOk && pessoa2IsOk) {
           destino = "abrigo";
         } else if (pessoa1IsOk && adotadosPorPessoa[1].length < 3) {
